@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Padre: infrastructure-adapters -->
+	<parent>
+		<groupId>com.turismo.show.backend</groupId>
+		<artifactId>infrastructure-adapters</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId>integration-adapter</artifactId>
+	<name>integration-adapter</name>
+	<description>Adapter para integración externa vía WebClient o API externa.</description>
+
+	<dependencies>
+
+		<!-- WebClient para consumo de servicios externos -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+
+		<!-- Dependencias al dominio y a la aplicación -->
+		<dependency>
+			<groupId>com.turismo.show.backend</groupId>
+			<artifactId>application</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.turismo.show.backend</groupId>
+			<artifactId>domain</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<!-- Lombok (opcional) -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+	</dependencies>
+
+</project>

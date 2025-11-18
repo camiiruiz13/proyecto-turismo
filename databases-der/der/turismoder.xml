@@ -1,0 +1,138 @@
+<mxfile>
+  <diagram name="ERD">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- tipo_documento -->
+        <mxCell id="tipo_documento" value="tipo_documento
+PK id
+codigo
+descripcion" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="180" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- pais -->
+        <mxCell id="pais" value="pais
+PK id
+iso2
+iso3
+nombre
+prefijo_telefono" style="rounded=1;whiteSpace=wrap;fillColor=#ffd966;" vertex="1" parent="1">
+          <mxGeometry x="260" y="40" width="200" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- persona -->
+        <mxCell id="persona" value="persona
+PK id
+FK id_tipo_documento
+FK id_pais
+numero_documento
+nombres
+apellidos
+fecha_nacimiento
+ciudad_nacimiento
+fecha_expedicion
+ciudad_expedicion
+direccion
+ciudad
+email
+telefono_personal
+telefono_whatsapp" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="260" height="330" as="geometry"/>
+        </mxCell>
+
+        <!-- rol -->
+        <mxCell id="rol" value="rol
+PK id
+nombre
+descripcion" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="180" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- usuario -->
+        <mxCell id="usuario" value="usuario
+PK id
+FK id_persona
+FK id_rol
+username
+password_hash
+activo
+foto_base64" style="rounded=1;whiteSpace=wrap;fillColor=#d0e0e3;" vertex="1" parent="1">
+          <mxGeometry x="260" y="260" width="220" height="200" as="geometry"/>
+        </mxCell>
+
+        <!-- plan_turismo -->
+        <mxCell id="plan_turismo" value="plan_turismo
+PK id
+titulo
+descripcion
+precio
+fecha_inicio
+fecha_fin
+activo
+fecha_creacion
+fecha_modificacion" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="240" height="240" as="geometry"/>
+        </mxCell>
+
+        <!-- plan_imagen -->
+        <mxCell id="plan_imagen" value="plan_imagen
+PK id
+FK id_plan
+imagen_base64
+orden
+fecha_creacion" style="rounded=1;whiteSpace=wrap;fillColor=#d9d2e9;" vertex="1" parent="1">
+          <mxGeometry x="320" y="480" width="230" height="180" as="geometry"/>
+        </mxCell>
+
+        <!-- pre_registro -->
+        <mxCell id="pre_registro" value="pre_registro
+PK id
+FK id_persona
+FK id_plan
+estado (enum)
+fecha_registro" style="rounded=1;whiteSpace=wrap;fillColor=#f4cccc;" vertex="1" parent="1">
+          <mxGeometry x="580" y="420" width="240" height="160" as="geometry"/>
+        </mxCell>
+
+        <!-- pago -->
+        <mxCell id="pago" value="pago
+PK id
+FK id_persona
+FK id_plan
+status (enum)
+referencia_externa
+fecha_pago
+fecha_creacion
+fecha_modificacion" style="rounded=1;whiteSpace=wrap;fillColor=#c9daf8;" vertex="1" parent="1">
+          <mxGeometry x="580" y="600" width="260" height="220" as="geometry"/>
+        </mxCell>
+
+        <!-- plan_cliente -->
+        <mxCell id="plan_cliente" value="plan_cliente
+PK id
+FK id_usuario
+FK id_plan
+fecha_asignacion" style="rounded=1;whiteSpace=wrap;fillColor=#e2efda;" vertex="1" parent="1">
+          <mxGeometry x="880" y="600" width="230" height="160" as="geometry"/>
+        </mxCell>
+
+        <!-- RELACIONES -->
+        <mxCell id="rel1" edge="1" source="persona" target="tipo_documento" style="endArrow=block;strokeColor=#000"/>
+        <mxCell id="rel2" edge="1" source="persona" target="pais" style="endArrow=block;strokeColor=#000"/>
+        <mxCell id="rel3" edge="1" source="usuario" target="persona" style="endArrow=block;strokeColor=#000"/>
+        <mxCell id="rel4" edge="1" source="usuario" target="rol" style="endArrow=block;strokeColor=#000"/>
+        <mxCell id="rel5" edge="1" source="plan_imagen" target="plan_turismo" style="endArrow=block;strokeColor=#000"/>
+        <mxCell id="rel6" edge="1" source="pre_registro" target="persona" style="endArrow=block;strokeColor=#000"/>
+        <mxCell id="rel7" edge="1" source="pre_registro" target="plan_turismo" style="endArrow=block;strokeColor=#000"/>
+        <mxCell id="rel8" edge="1" source="pago" target="persona" style="endArrow=block;strokeColor=#000"/>
+        <mxCell id="rel9" edge="1" source="pago" target="plan_turismo" style="endArrow=block;strokeColor=#000"/>
+        <mxCell id="rel10" edge="1" source="plan_cliente" target="usuario" style="endArrow=block;strokeColor=#000"/>
+        <mxCell id="rel11" edge="1" source="plan_cliente" target="plan_turismo" style="endArrow=block;strokeColor=#000"/>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

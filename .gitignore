@@ -1,0 +1,72 @@
+# ===========================
+# SISTEMA OPERATIVO
+# ===========================
+.DS_Store
+Thumbs.db
+
+# ===========================
+# IDEs
+# ===========================
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# VSCode
+.vscode/
+
+# ===========================
+# JAVA / MAVEN / GRADLE
+# ===========================
+target/
+build/
+**/target/
+**/build/
+
+# Maven local files
+.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+*.log
+logs/
+
+# Spring Boot
+spring.log
+*.pid
+*.gz
+*.zip
+
+# ===========================
+# ANGULAR / NODE
+# ===========================
+node_modules/
+dist/
+.angular/
+.tmp/
+.cache/
+
+# ===========================
+# ENVS
+# ===========================
+*.env
+*.env.local
+environment*.ts
+!environment.example.ts
+
+# ===========================
+# TEMPORALES
+# ===========================
+*.tmp
+*.bak
+*.swp
+
+# ===========================
+# DRAW.IO / DIAGRAMAS
+# ===========================
+# Mantener XML (diagramas)
+!*.xml
+
+# ===========================
+# DOCUMENTACIÓN
+# ===========================
+# Se permite pdf, sql, md, png, xml, etc.
