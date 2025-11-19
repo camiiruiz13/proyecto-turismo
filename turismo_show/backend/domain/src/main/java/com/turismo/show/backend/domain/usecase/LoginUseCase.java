@@ -22,7 +22,7 @@ public class LoginUseCase {
             throw new UserNotFoundException(username);
         }
         passwordGateway.esClaveValida(password, user.getClave());
-        
+
         return Login.builder()
                 .idUsuario(user.getIdUsuario())
                 .username(user.getCorreo())
