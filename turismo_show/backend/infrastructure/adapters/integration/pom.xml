@@ -7,11 +7,11 @@
 
 	<!-- Padre: infrastructure-adapters -->
 	<parent>
-		<groupId>com.turismo.show.backend</groupId>
-		<artifactId>infrastructure-adapters</artifactId>
-		<version>1.0.0</version>
-		<relativePath>../pom.xml</relativePath>
-	</parent>
+        <groupId>com.turismo.show.backend</groupId>
+        <artifactId>infrastructure-adapters</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
 
 	<artifactId>integration-adapter</artifactId>
 	<name>integration-adapter</name>

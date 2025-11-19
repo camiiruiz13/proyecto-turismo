@@ -9,7 +9,7 @@
         <groupId>com.turismo.show.backend</groupId>
         <artifactId>infrastructure-adapters</artifactId>
         <version>1.0.0</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>jpa-postgresql-adapter</artifactId>
