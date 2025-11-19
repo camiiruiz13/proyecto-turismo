@@ -12,21 +12,11 @@ import org.mapstruct.ReportingPolicy;
 )
 public interface UserModelMapper {
 
-    @Mapping(target = "idUsuario", source = "id")
-    @Mapping(target = "correo", source = "username")
-    @Mapping(target = "clave", source = "passwordHash")
-    @Mapping(target = "rol", source = "rol.nombre")
-    @Mapping(target = "activo", source = "activo")
-    @Mapping(target = "fotoBase64", source = "fotoBase64")
+    @Mapping(source = "id", target = "idUsuario")
+    @Mapping(source = "username", target = "correo")
+    @Mapping(source = "passwordHash", target = "clave")
+    @Mapping(source = "rol.nombre", target = "rol")
+    @Mapping(source = "fotoBase64", target = "fotoBase64")
+    @Mapping(source = "activo", target = "activo")
     User toModel(UsuarioEntity entity);
-
-    @Mapping(target = "id", source = "idUsuario")
-    @Mapping(target = "username", source = "correo")
-    @Mapping(target = "passwordHash", source = "clave")
-    @Mapping(target = "rol", ignore = true)
-    @Mapping(target = "persona", ignore = true)
-    @Mapping(target = "fotoBase64", source = "fotoBase64")
-    @Mapping(target = "fechaCreacion", ignore = true)
-    UsuarioEntity toEntity(User model);
-
 }
