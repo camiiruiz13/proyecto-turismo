@@ -8,10 +8,9 @@ import com.turismo.show.backend.infrastructure.adapters.jpapostgresql.mapper.Use
 import com.turismo.show.backend.infrastructure.adapters.jpapostgresql.repositories.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-@Repository
+
 @RequiredArgsConstructor
 @Slf4j
 public class UserAdapter implements UserGateway {

@@ -12,8 +12,9 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class AuthResponseDTO {
-    private Long idUser;
+    private Integer idUsuario;
     private String username;
+    private String rol;
+    private String foto;
     private String token;
-    private List<String> roles;
 }
