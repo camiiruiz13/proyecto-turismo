@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <modelVersion>4.0.0</modelVersion>
-
-    <!-- PARENT GLOBAL DEL PROYECTO -->
     <parent>
-        <groupId>com.turismo.show.backend</groupId>
-        <artifactId>turismo-backend</artifactId>
-        <version>1.0.0</version>
-        <relativePath>../../pom.xml</relativePath> <!-- ESTA ES LA RUTA CORRECTA -->
+        <groupId>infrastructure</groupId>
+        <artifactId>infrastructure</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
-
-    <artifactId>infrastructure-adapters</artifactId>
+    <groupId>adapters</groupId>
+    <artifactId>adapters</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-
-    <name>infrastructure-adapters</name>
-    <description>Paquete padre para los adaptadores de infraestructura: JPA, Security e Integration.</description>
-
-    <!-- HIJOS (LOS 3 ADAPTERS REALES) -->
+    <name>adapters</name>
+    <description>Módulo agrupador de adaptadores técnicos</description>
     <modules>
         <module>jpa-postgresql-adapter</module>
-        <module>security</module>
-        <module>integration</module>
+        <module>security-adapter</module>
+        <module>integration-adapters</module>
     </modules>
+
 
 </project>

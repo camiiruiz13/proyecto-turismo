@@ -2,16 +2,17 @@ package com.turismo.show.backend.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.persistence.autoconfigure.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication
-/*@ComponentScan(basePackages = {
-		"com.turismo.show.backend.infrastructure.adapters",
-		"com.turismo.show.backend.infrastructure.entrypoints",
-		"com.turismo.show.backend.application"
-})*/
+
+@SpringBootApplication(scanBasePackages = "com.turismo.show.backend")
+@EnableJpaRepositories(basePackages = "com.turismo.show.backend")
+@EntityScan(basePackages = "com.turismo.show.backend")
 public class Application {
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 }
+
