@@ -215,6 +215,10 @@
                         <exclude>**/mapper/**</exclude>
                         <exclude>**/*Mapper.class</exclude>
                         <exclude>**/*MapperImpl.class</exclude>
+						<!-- CLASES SIN LÓGICA QUE SE EXCLUYEN DE COBERTURA -->
+						<exclude>**/TokenJwtConfig.class</exclude>
+						<exclude>**/ErrorConstants.class</exclude>
+						<exclude>**/AuthenticatedUser.class</exclude>
 
                     </excludes>
                 </configuration>

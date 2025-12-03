@@ -5,18 +5,11 @@ import com.turismo.show.backend.infrastructure.adapters.securityadapter.exceptio
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Component;
 import tools.jackson.databind.ObjectMapper;
 
-import java.util.Collection;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
-import static com.turismo.show.backend.infrastructure.adapters.securityadapter.commons.ErrorConstants.INVALID_TOKEN;
 
 @Component
 @RequiredArgsConstructor
