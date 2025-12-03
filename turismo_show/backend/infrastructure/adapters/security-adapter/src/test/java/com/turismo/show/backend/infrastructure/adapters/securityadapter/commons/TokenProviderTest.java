@@ -1,6 +1,5 @@
 package com.turismo.show.backend.infrastructure.adapters.securityadapter.commons;
 
-
 import com.turismo.show.backend.infrastructure.adapters.securityadapter.auth.AuthenticatedUser;
 import com.turismo.show.backend.infrastructure.adapters.securityadapter.exception.AutenticationException;
 import org.junit.jupiter.api.Test;
@@ -44,17 +43,22 @@ class TokenProviderTest {
         when(user.getIdUser()).thenReturn("123");
 
         // Autoridades
-        GrantedAuthority authority = () -> "ROLE_USER";
-        Collection<GrantedAuthority> authorities = List.of(authority);
+        GrantedAuthority mockAuthority = () -> "ROLE_USER";
+        Collection<GrantedAuthority> authorities = List.of(mockAuthority);
 
-        // Authentication concreto
+        // Authentication concreto (fix Sonar: eliminar método vacío)
         Authentication auth = new Authentication() {
             @Override public Collection<? extends GrantedAuthority> getAuthorities() { return authorities; }
             @Override public Object getCredentials() { return null; }
             @Override public Object getDetails() { return null; }
             @Override public Object getPrincipal() { return user; }
             @Override public boolean isAuthenticated() { return true; }
-            @Override public void setAuthenticated(boolean isAuthenticated) throws IllegalArgumentException {}
+
+            @Override
+            public void setAuthenticated(boolean isAuthenticated) throws IllegalArgumentException {
+                // Not needed for this test, method intentionally left blank
+            }
+
             @Override public String getName() { return "testuser"; }
         };
 
@@ -78,7 +82,4 @@ class TokenProviderTest {
 
         assertEquals("Error generating token", ex.getMessage());
     }
-
 }
-
-

@@ -38,14 +38,18 @@ class PasswordAdapterTest {
     void shouldThrowExceptionWhenPasswordDoesNotMatch() {
         String rawPassword = "incorrecto";
         String hashedPassword = "$2a$10$hashDeEjemplo";
+
         when(passwordEncoder.matches(rawPassword, hashedPassword)).thenReturn(false);
         when(passwordEncoder.encode(rawPassword)).thenReturn("$2a$10$hashNuevo");
 
-        AutenticationException exception = assertThrows(AutenticationException.class,
-                () -> passwordAdapter.esClaveValida(rawPassword, hashedPassword));
+        AutenticationException exception = assertThrows(
+                AutenticationException.class,
+                () -> passwordAdapter.esClaveValida(rawPassword, hashedPassword)
+        );
 
+        assertEquals("Password incorrecta", exception.getMessage());
 
         verify(passwordEncoder, atLeastOnce()).matches(rawPassword, hashedPassword);
-
     }
+
 }
