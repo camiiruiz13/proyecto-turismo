@@ -1,0 +1,756 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] backend                                                            [pom]
+[INFO] domain                                                             [jar]
+[INFO] infrastructure                                                     [pom]
+[INFO] adapters                                                           [pom]
+[INFO] jpa-postgresql-adapter                                             [jar]
+[INFO] security-adapter                                                   [jar]
+[INFO] integration-adapters                                               [jar]
+[INFO] entrypoints                                                        [pom]
+[INFO] rest-api                                                           [jar]
+[INFO] application                                                        [jar]
+[INFO] 
+[INFO] ------------------< com.turismo.show.backend:backend >------------------
+[INFO] Building backend 0.0.1-SNAPSHOT                                   [1/10]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ backend ---
+[INFO] Deleting C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\target
+[INFO] 
+[INFO] ---------------------------< domain:domain >----------------------------
+[INFO] Building domain 0.0.1-SNAPSHOT                                    [2/10]
+[INFO]   from domain\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ domain ---
+[INFO] Deleting C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\domain\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ domain ---
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\domain\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\domain\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ domain ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 9 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ domain ---
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\domain\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ domain ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ domain ---
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ domain ---
+[INFO] Building jar: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\domain\target\domain-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] -------------------< infrastructure:infrastructure >--------------------
+[INFO] Building infrastructure 0.0.1-SNAPSHOT                            [3/10]
+[INFO]   from infrastructure\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ infrastructure ---
+[INFO] Deleting C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\target
+[INFO] 
+[INFO] -------------------------< adapters:adapters >--------------------------
+[INFO] Building adapters 0.0.1-SNAPSHOT                                  [4/10]
+[INFO]   from infrastructure\adapters\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ adapters ---
+[INFO] Deleting C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\target
+[INFO] 
+[INFO] --< com.turismo.show.backend.infrastructure.adapters:jpa-postgresql-adapter >--
+[INFO] Building jpa-postgresql-adapter 0.0.1-SNAPSHOT                    [5/10]
+[INFO]   from infrastructure\adapters\jpa-postgresql-adapter\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ jpa-postgresql-adapter ---
+[INFO] Deleting C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\jpa-postgresql-adapter\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ jpa-postgresql-adapter ---
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\jpa-postgresql-adapter\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\jpa-postgresql-adapter\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ jpa-postgresql-adapter ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 17 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ jpa-postgresql-adapter ---
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\jpa-postgresql-adapter\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ jpa-postgresql-adapter ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ jpa-postgresql-adapter ---
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ jpa-postgresql-adapter ---
+[INFO] Building jar: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\jpa-postgresql-adapter\target\jpa-postgresql-adapter-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --< com.turismo.show.backend.infrastructure.adapters:security-adapter >--
+[INFO] Building security-adapter 0.0.1-SNAPSHOT                          [6/10]
+[INFO]   from infrastructure\adapters\security-adapter\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ security-adapter ---
+[INFO] Deleting C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\security-adapter\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ security-adapter ---
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\security-adapter\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\security-adapter\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ security-adapter ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 17 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ security-adapter ---
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\security-adapter\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ security-adapter ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ security-adapter ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.turismo.show.backend.infrastructure.adapters.securityadapter.filter.ValidationFilterTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.502 s -- in com.turismo.show.backend.infrastructure.adapters.securityadapter.filter.ValidationFilterTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ security-adapter ---
+[INFO] Building jar: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\security-adapter\target\security-adapter-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --< com.turismo.show.backend.infrastructure.adapters:integration-adapters >--
+[INFO] Building integration-adapters 0.0.1-SNAPSHOT                      [7/10]
+[INFO]   from infrastructure\adapters\integration-adapters\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ integration-adapters ---
+[INFO] Deleting C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\integration-adapters\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ integration-adapters ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ integration-adapters ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ integration-adapters ---
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\integration-adapters\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ integration-adapters ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ integration-adapters ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.turismo.show.backend.infrastructure.adapters.integrationadapters.IntegrationAdaptersApplicationTests
+20:34:15.012 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.turismo.show.backend.infrastructure.adapters.integrationadapters.IntegrationAdaptersApplicationTests]: IntegrationAdaptersApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:34:15.102 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.turismo.show.backend.infrastructure.adapters.integrationadapters.IntegrationAdaptersApplication for test class com.turismo.show.backend.infrastructure.adapters.integrationadapters.IntegrationAdaptersApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-24T20:34:15.531-05:00  INFO 27148 --- [integration-adapters] [           main] .a.i.IntegrationAdaptersApplicationTests : Starting IntegrationAdaptersApplicationTests using Java 21.0.6 with PID 27148 (started by camil in C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\integration-adapters)
+2025-11-24T20:34:15.533-05:00  INFO 27148 --- [integration-adapters] [           main] .a.i.IntegrationAdaptersApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2025-11-24T20:34:16.686-05:00  INFO 27148 --- [integration-adapters] [           main] .a.i.IntegrationAdaptersApplicationTests : Started IntegrationAdaptersApplicationTests in 1.451 seconds (process running for 2.555)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.469 s -- in com.turismo.show.backend.infrastructure.adapters.integrationadapters.IntegrationAdaptersApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ integration-adapters ---
+[INFO] Building jar: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\integration-adapters\target\integration-adapters-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ----------------------< entrypoints:entrypoints >-----------------------
+[INFO] Building entrypoints 0.0.1-SNAPSHOT                               [8/10]
+[INFO]   from infrastructure\entrypoints\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ entrypoints ---
+[INFO] Deleting C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\entrypoints\target
+[INFO] 
+[INFO] ----< com.turismo.show.backend.infrastructure.entrypoints:rest-api >----
+[INFO] Building rest-api 0.0.1-SNAPSHOT                                  [9/10]
+[INFO]   from infrastructure\entrypoints\rest-api\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ rest-api ---
+[INFO] Deleting C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\entrypoints\rest-api\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ rest-api ---
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\entrypoints\rest-api\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\entrypoints\rest-api\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ rest-api ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 16 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ rest-api ---
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\entrypoints\rest-api\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ rest-api ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ rest-api ---
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ rest-api ---
+[INFO] Building jar: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\entrypoints\rest-api\target\rest-api-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ----------------------< application:application >-----------------------
+[INFO] Building application 0.0.1-SNAPSHOT                              [10/10]
+[INFO]   from application\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ application ---
+[INFO] Deleting C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\application\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ application ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ application ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ application ---
+[INFO] skip non existing resourceDirectory C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\application\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ application ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ application ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.turismo.show.backend.application.ApplicationTests
+20:34:22.263 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.turismo.show.backend.application.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:34:22.363 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.turismo.show.backend.application.Application for test class com.turismo.show.backend.application.ApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2025-11-24T20:34:22.875-05:00  INFO 2376 --- [integration-adapters] [           main] c.t.s.b.application.ApplicationTests     : Starting ApplicationTests using Java 21.0.6 with PID 2376 (started by camil in C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\application)
+2025-11-24T20:34:22.877-05:00  INFO 2376 --- [integration-adapters] [           main] c.t.s.b.application.ApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2025-11-24T20:34:23.612-05:00  INFO 2376 --- [integration-adapters] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-24T20:34:23.773-05:00  INFO 2376 --- [integration-adapters] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 1 JPA repository interface.
+2025-11-24T20:34:24.687-05:00  INFO 2376 --- [integration-adapters] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-24T20:34:24.761-05:00  INFO 2376 --- [integration-adapters] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-11-24T20:34:25.259-05:00  INFO 2376 --- [integration-adapters] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-24T20:34:25.302-05:00  INFO 2376 --- [integration-adapters] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-24T20:34:25.454-05:00  INFO 2376 --- [integration-adapters] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4229b92c
+2025-11-24T20:34:25.456-05:00  INFO 2376 --- [integration-adapters] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-24T20:34:25.498-05:00  WARN 2376 --- [integration-adapters] [           main] org.hibernate.dialect.Dialect            : HHH000511: The 9.6.17 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 13.0.0. Check the community dialects project for available legacy versions.
+2025-11-24T20:34:25.503-05:00  WARN 2376 --- [integration-adapters] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-24T20:34:25.528-05:00  INFO 2376 --- [integration-adapters] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/turismo_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 9.6.17
+	Default catalog/schema: turismo_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-24T20:34:26.780-05:00  INFO 2376 --- [integration-adapters] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-24T20:34:26.794-05:00  INFO 2376 --- [integration-adapters] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-24T20:34:26.906-05:00  INFO 2376 --- [integration-adapters] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-24T20:34:27.401-05:00  WARN 2376 --- [integration-adapters] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-24T20:34:28.279-05:00  INFO 2376 --- [integration-adapters] [           main] c.t.s.b.application.ApplicationTests     : Started ApplicationTests in 5.759 seconds (process running for 6.956)
+2025-11-24T20:34:28.283-05:00  WARN 2376 --- [integration-adapters] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-24T20:34:28.283-05:00  WARN 2376 --- [integration-adapters] [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.595 s -- in com.turismo.show.backend.application.ApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ application ---
+[INFO] Building jar: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\application\target\application-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ------------------< com.turismo.show.backend:backend >------------------
+[INFO] Building backend 0.0.1-SNAPSHOT                                  [11/10]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- sonar:3.10.0.2594:sonar (default-cli) @ backend ---
+[INFO] User cache: C:\Users\camil\.sonar\cache
+[INFO] SonarQube version: 25.11.0.114957
+[INFO] Default locale: "es_CO", source code encoding: "UTF-8"
+[WARNING] Property 'env.WT_PROFILE_ID' is encrypted. The encryption of scanner properties is deprecated and will soon be removed.
+[INFO] Load global settings
+[INFO] Load global settings (done) | time=80ms
+[INFO] Server id: 147B411E-AZq4UptcchWnSmtQjp24
+[INFO] Loading required plugins
+[INFO] Load plugins index
+[INFO] Load plugins index (done) | time=36ms
+[INFO] Load/download plugins
+[INFO] Load/download plugins (done) | time=14ms
+[INFO] Process project properties
+[INFO] Process project properties (done) | time=27ms
+[INFO] Project key: com.turismo.show.backend:backend
+[INFO] Base dir: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend
+[INFO] Working dir: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\target\sonar
+[INFO] Load project settings for component key: 'com.turismo.show.backend:backend'
+[INFO] Load project settings for component key: 'com.turismo.show.backend:backend' (done) | time=17ms
+[INFO] Load quality profiles
+[INFO] Load quality profiles (done) | time=65ms
+[INFO] Load active rules
+[INFO] Load active rules (done) | time=388ms
+[INFO] Load analysis cache
+[INFO] Load analysis cache (3.1 kB) | time=29ms
+[WARNING] The property 'sonar.login' is deprecated and will be removed in the future. Please use the 'sonar.token' property instead when passing a token.
+[INFO] Preprocessing files...
+[INFO] 2 languages detected in 62 preprocessed files (done) | time=356ms
+[INFO] 13 files ignored because of inclusion/exclusion patterns
+[INFO] 0 files ignored because of scm ignore settings
+[INFO] Loading plugins for detected languages
+[INFO] Load/download plugins
+[INFO] Load/download plugins (done) | time=9ms
+[INFO] Load project repositories
+[INFO] Load project repositories (done) | time=85ms
+[INFO] Indexing files...
+[INFO] Project configuration:
+[INFO]   Excluded sources: **/dto/**, **/config/**, **/exception/**
+[INFO]   Excluded sources for coverage: **/dto/**, **/config/**, **/exception/**
+[INFO] Indexing files of module 'application'
+[INFO]   Base dir: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\application
+[INFO]   Source paths: pom.xml, src/main/java
+[INFO]   Test paths: src/test/java
+[INFO]   Excluded sources: **/dto/**, **/config/**, **/exception/**
+[INFO]   Excluded sources for coverage: **/dto/**, **/config/**, **/exception/**
+[INFO] Indexing files of module 'domain'
+[INFO]   Base dir: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\domain
+[INFO]   Source paths: pom.xml, src/main/java
+[INFO]   Test paths: src/test/java
+[INFO]   Excluded sources: **/dto/**, **/config/**, **/exception/**
+[INFO]   Excluded sources for coverage: **/dto/**, **/config/**, **/exception/**
+[INFO] Indexing files of module 'integration-adapters'
+[INFO]   Base dir: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\integration-adapters
+[INFO]   Source paths: pom.xml, src/main/java
+[INFO]   Test paths: src/test/java
+[INFO]   Excluded sources: **/dto/**, **/config/**, **/exception/**
+[INFO]   Excluded sources for coverage: **/dto/**, **/config/**, **/exception/**
+[INFO] Indexing files of module 'jpa-postgresql-adapter'
+[INFO]   Base dir: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\jpa-postgresql-adapter
+[INFO]   Source paths: pom.xml, src/main/java
+[INFO]   Test paths: src/test/java
+[INFO]   Excluded sources: **/dto/**, **/config/**, **/exception/**
+[INFO]   Excluded sources for coverage: **/dto/**, **/config/**, **/exception/**
+[INFO] Indexing files of module 'security-adapter'
+[INFO]   Base dir: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\security-adapter
+[INFO]   Source paths: pom.xml, src/main/java
+[INFO]   Test paths: src/test/java
+[INFO]   Excluded sources: **/dto/**, **/config/**, **/exception/**
+[INFO]   Excluded sources for coverage: **/dto/**, **/config/**, **/exception/**
+[INFO] Indexing files of module 'adapters'
+[INFO]   Base dir: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters
+[INFO]   Source paths: pom.xml
+[INFO]   Excluded sources: **/dto/**, **/config/**, **/exception/**
+[INFO]   Excluded sources for coverage: **/dto/**, **/config/**, **/exception/**
+[INFO] Indexing files of module 'rest-api'
+[INFO]   Base dir: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\entrypoints\rest-api
+[INFO]   Source paths: pom.xml, src/main/java
+[INFO]   Test paths: src/test/java
+[INFO]   Excluded sources: **/dto/**, **/config/**, **/exception/**
+[INFO]   Excluded sources for coverage: **/dto/**, **/config/**, **/exception/**
+[INFO] Indexing files of module 'entrypoints'
+[INFO]   Base dir: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\entrypoints
+[INFO]   Source paths: pom.xml
+[INFO]   Excluded sources: **/dto/**, **/config/**, **/exception/**
+[INFO]   Excluded sources for coverage: **/dto/**, **/config/**, **/exception/**
+[INFO] Indexing files of module 'infrastructure'
+[INFO]   Base dir: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure
+[INFO]   Source paths: pom.xml
+[INFO]   Excluded sources: **/dto/**, **/config/**, **/exception/**
+[INFO]   Excluded sources for coverage: **/dto/**, **/config/**, **/exception/**
+[INFO] Indexing files of module 'backend'
+[INFO]   Base dir: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend
+[INFO]   Source paths: pom.xml
+[INFO]   Excluded sources: **/dto/**, **/config/**, **/exception/**
+[INFO]   Excluded sources for coverage: **/dto/**, **/config/**, **/exception/**
+[INFO] 62 files indexed (done) | time=18ms
+[INFO] Quality profile for java: Sonar way
+[INFO] Quality profile for xml: Sonar way
+[INFO] ------------- Run sensors on module rest-api
+[INFO] Load metrics repository
+[INFO] Load metrics repository (done) | time=22ms
+[INFO] Sensor JavaSensor [java]
+[INFO] Configured Java source version (sonar.java.source): 21, preview features enabled (sonar.java.enablePreview): false
+[INFO] Server-side caching is enabled. The Java analyzer will not try to leverage data from a previous analysis.
+[INFO] Using ECJ batch to parse 11 Main java source files with batch size 318 KB.
+[INFO] Starting batch processing.
+[INFO] The Java analyzer cannot skip unchanged files in this context. A full analysis is performed for all files.
+[INFO] 100% analyzed
+[INFO] Batch processing: Done.
+[INFO] Did not optimize analysis for any files, performed a full analysis for all 11 files.
+[WARNING] Unresolved imports/types have been detected during analysis. Enable DEBUG mode to see them.
+[WARNING] Use of preview features have been detected during analysis. Enable DEBUG mode to see them.
+[INFO] No "Test" source files to scan.
+[INFO] No "Generated" source files to scan.
+[INFO] Sensor JavaSensor [java] (done) | time=1357ms
+[INFO] Sensor SurefireSensor [java]
+[INFO] Surefire report path: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\entrypoints\rest-api/**/target/surefire-reports not found.
+[INFO] parsing []
+[INFO] Sensor SurefireSensor [java] (done) | time=3ms
+[INFO] Sensor XML Sensor [xml]
+[INFO] 1 source file to be analyzed
+[INFO] 1/1 source file has been analyzed
+[INFO] Sensor XML Sensor [xml] (done) | time=143ms
+[INFO] Sensor JaCoCo XML Report Importer [jacoco]
+[WARNING] No coverage report can be found with sonar.coverage.jacoco.xmlReportPaths='**/target/site/jacoco/jacoco.xml'. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+[INFO] No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+[INFO] Sensor JaCoCo XML Report Importer [jacoco] (done) | time=20ms
+[INFO] Sensor IaC Docker Sensor [iac]
+[INFO] There are no files to be analyzed for the Docker language
+[INFO] Sensor IaC Docker Sensor [iac] (done) | time=1ms
+[INFO] Sensor IaC hadolint report Sensor [iac]
+[INFO] Sensor IaC hadolint report Sensor [iac] (done) | time=2ms
+[INFO] Sensor Java Config Sensor [iac]
+[INFO] There are no files to be analyzed for the Java language
+[INFO] Sensor Java Config Sensor [iac] (done) | time=8ms
+[INFO] ------------- Run sensors on module entrypoints
+[INFO] Sensor XML Sensor [xml]
+[INFO] 1 source file to be analyzed
+[INFO] 1/1 source file has been analyzed
+[INFO] Sensor XML Sensor [xml] (done) | time=11ms
+[INFO] Sensor JaCoCo XML Report Importer [jacoco]
+[WARNING] No coverage report can be found with sonar.coverage.jacoco.xmlReportPaths='**/target/site/jacoco/jacoco.xml'. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+[INFO] No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+[INFO] Sensor JaCoCo XML Report Importer [jacoco] (done) | time=10ms
+[INFO] Sensor IaC Docker Sensor [iac]
+[INFO] There are no files to be analyzed for the Docker language
+[INFO] Sensor IaC Docker Sensor [iac] (done) | time=0ms
+[INFO] Sensor IaC hadolint report Sensor [iac]
+[INFO] Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+[INFO] Sensor Java Config Sensor [iac]
+[INFO] There are no files to be analyzed for the Java language
+[INFO] Sensor Java Config Sensor [iac] (done) | time=1ms
+[INFO] ------------- Run sensors on module integration-adapters
+[INFO] Sensor JavaSensor [java]
+[INFO] Configured Java source version (sonar.java.source): 21, preview features enabled (sonar.java.enablePreview): false
+[INFO] Server-side caching is enabled. The Java analyzer will not try to leverage data from a previous analysis.
+[INFO] Using ECJ batch to parse 1 Main java source files with batch size 318 KB.
+[INFO] Starting batch processing.
+[INFO] The Java analyzer cannot skip unchanged files in this context. A full analysis is performed for all files.
+[INFO] 100% analyzed
+[INFO] Batch processing: Done.
+[INFO] Did not optimize analysis for any files, performed a full analysis for all 1 files.
+[INFO] Using ECJ batch to parse 1 Test java source files with batch size 318 KB.
+[INFO] Starting batch processing.
+[INFO] 100% analyzed
+[INFO] Batch processing: Done.
+[INFO] Did not optimize analysis for any files, performed a full analysis for all 1 files.
+[INFO] No "Generated" source files to scan.
+[INFO] Sensor JavaSensor [java] (done) | time=196ms
+[INFO] Sensor SurefireSensor [java]
+[INFO] Surefire report path: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\integration-adapters/**/target/surefire-reports not found.
+[INFO] parsing []
+[INFO] Sensor SurefireSensor [java] (done) | time=0ms
+[INFO] Sensor XML Sensor [xml]
+[INFO] 1 source file to be analyzed
+[INFO] 1/1 source file has been analyzed
+[INFO] Sensor XML Sensor [xml] (done) | time=14ms
+[INFO] Sensor JaCoCo XML Report Importer [jacoco]
+[WARNING] No coverage report can be found with sonar.coverage.jacoco.xmlReportPaths='**/target/site/jacoco/jacoco.xml'. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+[INFO] No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+[INFO] Sensor JaCoCo XML Report Importer [jacoco] (done) | time=6ms
+[INFO] Sensor IaC Docker Sensor [iac]
+[INFO] There are no files to be analyzed for the Docker language
+[INFO] Sensor IaC Docker Sensor [iac] (done) | time=0ms
+[INFO] Sensor IaC hadolint report Sensor [iac]
+[INFO] Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+[INFO] Sensor Java Config Sensor [iac]
+[INFO] There are no files to be analyzed for the Java language
+[INFO] Sensor Java Config Sensor [iac] (done) | time=0ms
+[INFO] ------------- Run sensors on module security-adapter
+[INFO] Sensor JavaSensor [java]
+[INFO] Configured Java source version (sonar.java.source): 21, preview features enabled (sonar.java.enablePreview): false
+[INFO] Server-side caching is enabled. The Java analyzer will not try to leverage data from a previous analysis.
+[INFO] Using ECJ batch to parse 14 Main java source files with batch size 318 KB.
+[INFO] Starting batch processing.
+[INFO] The Java analyzer cannot skip unchanged files in this context. A full analysis is performed for all files.
+[INFO] 100% analyzed
+[INFO] Batch processing: Done.
+[INFO] Did not optimize analysis for any files, performed a full analysis for all 14 files.
+[WARNING] Unresolved imports/types have been detected during analysis. Enable DEBUG mode to see them.
+[WARNING] Use of preview features have been detected during analysis. Enable DEBUG mode to see them.
+[INFO] Using ECJ batch to parse 1 Test java source files with batch size 318 KB.
+[INFO] Starting batch processing.
+[INFO] 100% analyzed
+[INFO] Batch processing: Done.
+[INFO] Did not optimize analysis for any files, performed a full analysis for all 1 files.
+[INFO] No "Generated" source files to scan.
+[INFO] Sensor JavaSensor [java] (done) | time=694ms
+[INFO] Sensor SurefireSensor [java]
+[INFO] Surefire report path: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\security-adapter/**/target/surefire-reports not found.
+[INFO] parsing []
+[INFO] Sensor SurefireSensor [java] (done) | time=0ms
+[INFO] Sensor XML Sensor [xml]
+[INFO] 1 source file to be analyzed
+[INFO] 1/1 source file has been analyzed
+[INFO] Sensor XML Sensor [xml] (done) | time=15ms
+[INFO] Sensor JaCoCo XML Report Importer [jacoco]
+[WARNING] No coverage report can be found with sonar.coverage.jacoco.xmlReportPaths='**/target/site/jacoco/jacoco.xml'. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+[INFO] No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+[INFO] Sensor JaCoCo XML Report Importer [jacoco] (done) | time=11ms
+[INFO] Sensor IaC Docker Sensor [iac]
+[INFO] There are no files to be analyzed for the Docker language
+[INFO] Sensor IaC Docker Sensor [iac] (done) | time=0ms
+[INFO] Sensor IaC hadolint report Sensor [iac]
+[INFO] Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+[INFO] Sensor Java Config Sensor [iac]
+[INFO] There are no files to be analyzed for the Java language
+[INFO] Sensor Java Config Sensor [iac] (done) | time=1ms
+[INFO] ------------- Run sensors on module jpa-postgresql-adapter
+[INFO] Sensor JavaSensor [java]
+[INFO] Configured Java source version (sonar.java.source): 21, preview features enabled (sonar.java.enablePreview): false
+[INFO] Server-side caching is enabled. The Java analyzer will not try to leverage data from a previous analysis.
+[INFO] Using ECJ batch to parse 16 Main java source files with batch size 318 KB.
+[INFO] Starting batch processing.
+[INFO] The Java analyzer cannot skip unchanged files in this context. A full analysis is performed for all files.
+[INFO] 100% analyzed
+[INFO] Batch processing: Done.
+[INFO] Did not optimize analysis for any files, performed a full analysis for all 16 files.
+[INFO] No "Test" source files to scan.
+[INFO] No "Generated" source files to scan.
+[INFO] Sensor JavaSensor [java] (done) | time=339ms
+[INFO] Sensor SurefireSensor [java]
+[INFO] Surefire report path: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\infrastructure\adapters\jpa-postgresql-adapter/**/target/surefire-reports not found.
+[INFO] parsing []
+[INFO] Sensor SurefireSensor [java] (done) | time=1ms
+[INFO] Sensor XML Sensor [xml]
+[INFO] 1 source file to be analyzed
+[INFO] 1/1 source file has been analyzed
+[INFO] Sensor XML Sensor [xml] (done) | time=20ms
+[INFO] Sensor JaCoCo XML Report Importer [jacoco]
+[WARNING] No coverage report can be found with sonar.coverage.jacoco.xmlReportPaths='**/target/site/jacoco/jacoco.xml'. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+[INFO] No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+[INFO] Sensor JaCoCo XML Report Importer [jacoco] (done) | time=10ms
+[INFO] Sensor IaC Docker Sensor [iac]
+[INFO] There are no files to be analyzed for the Docker language
+[INFO] Sensor IaC Docker Sensor [iac] (done) | time=1ms
+[INFO] Sensor IaC hadolint report Sensor [iac]
+[INFO] Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+[INFO] Sensor Java Config Sensor [iac]
+[INFO] There are no files to be analyzed for the Java language
+[INFO] Sensor Java Config Sensor [iac] (done) | time=0ms
+[INFO] ------------- Run sensors on module adapters
+[INFO] Sensor XML Sensor [xml]
+[INFO] 1 source file to be analyzed
+[INFO] 1/1 source file has been analyzed
+[INFO] Sensor XML Sensor [xml] (done) | time=8ms
+[INFO] Sensor JaCoCo XML Report Importer [jacoco]
+[WARNING] No coverage report can be found with sonar.coverage.jacoco.xmlReportPaths='**/target/site/jacoco/jacoco.xml'. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+[INFO] No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+[INFO] Sensor JaCoCo XML Report Importer [jacoco] (done) | time=21ms
+[INFO] Sensor IaC Docker Sensor [iac]
+[INFO] There are no files to be analyzed for the Docker language
+[INFO] Sensor IaC Docker Sensor [iac] (done) | time=0ms
+[INFO] Sensor IaC hadolint report Sensor [iac]
+[INFO] Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+[INFO] Sensor Java Config Sensor [iac]
+[INFO] There are no files to be analyzed for the Java language
+[INFO] Sensor Java Config Sensor [iac] (done) | time=0ms
+[INFO] ------------- Run sensors on module infrastructure
+[INFO] Sensor XML Sensor [xml]
+[INFO] 1 source file to be analyzed
+[INFO] 1/1 source file has been analyzed
+[INFO] Sensor XML Sensor [xml] (done) | time=9ms
+[INFO] Sensor JaCoCo XML Report Importer [jacoco]
+[WARNING] No coverage report can be found with sonar.coverage.jacoco.xmlReportPaths='**/target/site/jacoco/jacoco.xml'. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+[INFO] No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+[INFO] Sensor JaCoCo XML Report Importer [jacoco] (done) | time=32ms
+[INFO] Sensor IaC Docker Sensor [iac]
+[INFO] There are no files to be analyzed for the Docker language
+[INFO] Sensor IaC Docker Sensor [iac] (done) | time=0ms
+[INFO] Sensor IaC hadolint report Sensor [iac]
+[INFO] Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+[INFO] Sensor Java Config Sensor [iac]
+[INFO] There are no files to be analyzed for the Java language
+[INFO] Sensor Java Config Sensor [iac] (done) | time=1ms
+[INFO] ------------- Run sensors on module domain
+[INFO] Sensor JavaSensor [java]
+[INFO] Configured Java source version (sonar.java.source): 21, preview features enabled (sonar.java.enablePreview): false
+[INFO] Server-side caching is enabled. The Java analyzer will not try to leverage data from a previous analysis.
+[INFO] Using ECJ batch to parse 6 Main java source files with batch size 318 KB.
+[INFO] Starting batch processing.
+[INFO] The Java analyzer cannot skip unchanged files in this context. A full analysis is performed for all files.
+[INFO] 100% analyzed
+[INFO] Batch processing: Done.
+[INFO] Did not optimize analysis for any files, performed a full analysis for all 6 files.
+[INFO] No "Test" source files to scan.
+[INFO] No "Generated" source files to scan.
+[INFO] Sensor JavaSensor [java] (done) | time=103ms
+[INFO] Sensor SurefireSensor [java]
+[INFO] Surefire report path: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\domain/**/target/surefire-reports not found.
+[INFO] parsing []
+[INFO] Sensor SurefireSensor [java] (done) | time=0ms
+[INFO] Sensor XML Sensor [xml]
+[INFO] 1 source file to be analyzed
+[INFO] 1/1 source file has been analyzed
+[INFO] Sensor XML Sensor [xml] (done) | time=10ms
+[INFO] Sensor JaCoCo XML Report Importer [jacoco]
+[WARNING] No coverage report can be found with sonar.coverage.jacoco.xmlReportPaths='**/target/site/jacoco/jacoco.xml'. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+[INFO] No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+[INFO] Sensor JaCoCo XML Report Importer [jacoco] (done) | time=8ms
+[INFO] Sensor IaC Docker Sensor [iac]
+[INFO] There are no files to be analyzed for the Docker language
+[INFO] Sensor IaC Docker Sensor [iac] (done) | time=0ms
+[INFO] Sensor IaC hadolint report Sensor [iac]
+[INFO] Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+[INFO] Sensor Java Config Sensor [iac]
+[INFO] There are no files to be analyzed for the Java language
+[INFO] Sensor Java Config Sensor [iac] (done) | time=1ms
+[INFO] ------------- Run sensors on module application
+[INFO] Sensor JavaSensor [java]
+[INFO] Configured Java source version (sonar.java.source): 21, preview features enabled (sonar.java.enablePreview): false
+[INFO] Server-side caching is enabled. The Java analyzer will not try to leverage data from a previous analysis.
+[INFO] Using ECJ batch to parse 1 Main java source files with batch size 318 KB.
+[INFO] Starting batch processing.
+[INFO] The Java analyzer cannot skip unchanged files in this context. A full analysis is performed for all files.
+[INFO] 100% analyzed
+[INFO] Batch processing: Done.
+[INFO] Did not optimize analysis for any files, performed a full analysis for all 1 files.
+[INFO] Using ECJ batch to parse 1 Test java source files with batch size 318 KB.
+[INFO] Starting batch processing.
+[INFO] 100% analyzed
+[INFO] Batch processing: Done.
+[INFO] Did not optimize analysis for any files, performed a full analysis for all 1 files.
+[INFO] No "Generated" source files to scan.
+[INFO] Sensor JavaSensor [java] (done) | time=245ms
+[INFO] Sensor SurefireSensor [java]
+[INFO] Surefire report path: C:\Users\camil\OneDrive\Escritorio\proyecto-turismo\turismo_show\backend\application/**/target/surefire-reports not found.
+[INFO] parsing []
+[INFO] Sensor SurefireSensor [java] (done) | time=1ms
+[INFO] Sensor XML Sensor [xml]
+[INFO] 1 source file to be analyzed
+[INFO] 1/1 source file has been analyzed
+[INFO] Sensor XML Sensor [xml] (done) | time=9ms
+[INFO] Sensor JaCoCo XML Report Importer [jacoco]
+[WARNING] No coverage report can be found with sonar.coverage.jacoco.xmlReportPaths='**/target/site/jacoco/jacoco.xml'. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+[INFO] No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+[INFO] Sensor JaCoCo XML Report Importer [jacoco] (done) | time=6ms
+[INFO] Sensor IaC Docker Sensor [iac]
+[INFO] There are no files to be analyzed for the Docker language
+[INFO] Sensor IaC Docker Sensor [iac] (done) | time=1ms
+[INFO] Sensor IaC hadolint report Sensor [iac]
+[INFO] Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+[INFO] Sensor Java Config Sensor [iac]
+[INFO] There are no files to be analyzed for the Java language
+[INFO] Sensor Java Config Sensor [iac] (done) | time=0ms
+[INFO] ------------- Run sensors on module backend
+[INFO] Sensor XML Sensor [xml]
+[INFO] 1 source file to be analyzed
+[INFO] 1/1 source file has been analyzed
+[INFO] Sensor XML Sensor [xml] (done) | time=28ms
+[INFO] Sensor JaCoCo XML Report Importer [jacoco]
+[WARNING] No coverage report can be found with sonar.coverage.jacoco.xmlReportPaths='**/target/site/jacoco/jacoco.xml'. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+[INFO] No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+[INFO] Sensor JaCoCo XML Report Importer [jacoco] (done) | time=58ms
+[INFO] Sensor IaC Docker Sensor [iac]
+[INFO] There are no files to be analyzed for the Docker language
+[INFO] Sensor IaC Docker Sensor [iac] (done) | time=0ms
+[INFO] Sensor IaC hadolint report Sensor [iac]
+[INFO] Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+[INFO] Sensor Java Config Sensor [iac]
+[INFO] There are no files to be analyzed for the Java language
+[INFO] Sensor Java Config Sensor [iac] (done) | time=0ms
+[INFO] Sensor TextAndSecretsSensor [text]
+[INFO] Available processors: 12
+[INFO] Using 12 threads for analysis.
+[INFO] The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test" or "tests"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+[INFO] Start fetching files for the text and secrets analysis
+[INFO] Using Git CLI to retrieve untracked files
+[INFO] Retrieving language associated files and files included via "sonar.text.inclusions" that are tracked by git
+[INFO] Starting the text and secrets analysis
+[INFO] 62 source files to be analyzed for the text and secrets analysis
+[INFO] 62/62 source files have been analyzed for the text and secrets analysis
+[INFO] Sensor TextAndSecretsSensor [text] (done) | time=641ms
+[INFO] ------------- Run sensors on project
+[INFO] Sensor JavaProjectSensor [java]
+[INFO] Sensor JavaProjectSensor [java] (done) | time=2ms
+[INFO] Sensor Zero Coverage Sensor
+[INFO] Sensor Zero Coverage Sensor (done) | time=21ms
+[INFO] Sensor Java CPD Block Indexer
+[INFO] Sensor Java CPD Block Indexer (done) | time=35ms
+[INFO] ------------- Gather SCA dependencies on project
+[INFO] Dependency analysis skipped
+[INFO] SCM Publisher SCM provider for this project is: git
+[INFO] SCM Publisher 2 source files to be analyzed
+[INFO] SCM Publisher 0/2 source files have been analyzed (done) | time=363ms
+[WARNING] Missing blame information for the following files:
+[WARNING]   * pom.xml
+[WARNING]   * infrastructure/adapters/security-adapter/src/test/java/com/turismo/show/backend/infrastructure/adapters/securityadapter/filter/ValidationFilterTest.java
+[WARNING] This may lead to missing/broken features in SonarQube
+[INFO] CPD Executor 25 files had no CPD blocks
+[INFO] CPD Executor Calculating CPD for 24 files
+[INFO] CPD Executor CPD calculation finished (done) | time=16ms
+[INFO] SCM revision ID '106e1d250e2ae5787cb70c84f01571a1ccc6684c'
+[INFO] Analysis report generated in 138ms, dir size=443.5 kB
+[INFO] Analysis report compressed in 211ms, zip size=149.1 kB
+[INFO] Analysis report uploaded in 69ms
+[INFO] ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=com.turismo.show.backend%3Abackend
+[INFO] Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+[INFO] More about the report processing at http://localhost:9000/api/ce/task?id=2f042e4b-9be8-442a-8515-aefa551d41ae
+[INFO] Analysis total time: 8.073 s
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for backend 0.0.1-SNAPSHOT:
+[INFO] 
+[INFO] backend ............................................ SUCCESS [ 10.041 s]
+[INFO] domain ............................................. SUCCESS [  2.409 s]
+[INFO] infrastructure ..................................... SUCCESS [  0.005 s]
+[INFO] adapters ........................................... SUCCESS [  0.007 s]
+[INFO] jpa-postgresql-adapter ............................. SUCCESS [  2.312 s]
+[INFO] security-adapter ................................... SUCCESS [  4.524 s]
+[INFO] integration-adapters ............................... SUCCESS [  5.008 s]
+[INFO] entrypoints ........................................ SUCCESS [  0.004 s]
+[INFO] rest-api ........................................... SUCCESS [  1.813 s]
+[INFO] application ........................................ SUCCESS [  9.576 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  36.939 s
+[INFO] Finished at: 2025-11-24T20:34:38-05:00
+[INFO] ------------------------------------------------------------------------
