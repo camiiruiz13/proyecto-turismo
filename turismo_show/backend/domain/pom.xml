@@ -10,11 +10,11 @@
         <artifactId>backend</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>domain</groupId>
     <artifactId>domain</artifactId>
     <name>domain</name>
     <packaging>jar</packaging>
     <description>Modulo para modelos, lógica de negocio y puertos</description>
+    <url/>
 
     <dependencies>
         <dependency>

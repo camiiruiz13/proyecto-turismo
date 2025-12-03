@@ -7,7 +7,6 @@
         <artifactId>infrastructure</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>adapters</groupId>
     <artifactId>adapters</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
