@@ -1,7 +1,5 @@
 package com.turismo.show.backend.infrastructure.adapters.securityadapter.filter;
 
-import com.turismo.show.backend.domain.gateway.AuthenticationGateway;
-import com.turismo.show.backend.domain.model.User;
 import com.turismo.show.backend.infrastructure.adapters.securityadapter.auth.AuthenticatedUser;
 import com.turismo.show.backend.infrastructure.adapters.securityadapter.commons.TokenJwtConfig;
 import com.turismo.show.backend.infrastructure.adapters.securityadapter.commons.properties.SecurityPathsProperties;
@@ -24,7 +22,6 @@ import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -97,7 +94,7 @@ public class ValidationFilter extends BasicAuthenticationFilter {
 
         } catch (JwtException e) {
             ErrorModel error = ErrorModel.builder()
-                    .mensaje(INVALID_TOKEN.getMessage())
+                    .message(INVALID_TOKEN.getMessage())
                     .error(e.getMessage())
                     .build();
 

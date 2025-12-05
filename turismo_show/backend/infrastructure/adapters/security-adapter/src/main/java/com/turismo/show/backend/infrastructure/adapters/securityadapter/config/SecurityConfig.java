@@ -28,13 +28,21 @@ public class SecurityConfig {
 
     private static final String[] WHITE_LIST_URL = {
 
+            // Swagger UI:
             "/swagger-ui/**",
             "/swagger-ui.html",
+
+            // Springdoc internal
             "/v3/api-docs/**",
+            "/v3/api-docs.yaml",
             "/swagger-resources/**",
             "/webjars/**",
-            "/configuration/**"
+            "/configuration/**",
+
+            // Static OpenAPI contract
+            "/openapi/**"
     };
+
 
     @Bean
     AuthenticationManager authenticationManager() throws Exception {
@@ -59,6 +67,7 @@ public class SecurityConfig {
 
         String base = properties.getBasePath();
         String login = base + properties.getEndpoints().getLogin();
+        String tipoDocumento = base + properties.getEndpoints().getTipoDocumento();
 
         http
                 .csrf(csrf -> csrf.disable())
@@ -69,7 +78,7 @@ public class SecurityConfig {
                 )
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(WHITE_LIST_URL).permitAll()
-                        .requestMatchers(login).permitAll()
+                        .requestMatchers(login, tipoDocumento).permitAll()
                         .anyRequest().authenticated()
                 )
                 .addFilterAfter(validationFilter, UsernamePasswordAuthenticationFilter.class) // solo este

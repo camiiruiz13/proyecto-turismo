@@ -1,0 +1,47 @@
+LoginDTO:
+  type: object
+  properties:
+    correo:
+      type: string
+      example: usuario@correo.com
+    password:
+      type: string
+      example: "123456"
+  required:
+    - correo
+    - password
+
+SuccesResponseDTO:
+  type: object
+  properties:
+    message:
+      type: string
+    data:
+      type: object
+      nullable: true
+
+ErrorResponseDTO:
+  type: object
+  properties:
+    error:
+      type: string
+    message:
+      type: string
+
+AuthResponseDTO:
+  type: object
+  properties:
+    token:
+      type: string
+    expiresIn:
+      type: integer
+
+TipoDocumentoResponseDTO:
+  type: object
+  properties:
+    id:
+      type: integer
+    codigo:
+      type: string
+    descripcion:
+      type: string

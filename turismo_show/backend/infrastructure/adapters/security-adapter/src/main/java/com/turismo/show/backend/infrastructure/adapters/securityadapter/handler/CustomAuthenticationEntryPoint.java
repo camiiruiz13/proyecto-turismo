@@ -21,7 +21,7 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
         ErrorModel errorResponse  = ErrorModel.builder()
-                .mensaje(INVALID_TOKEN.getMessage())
+                .message(INVALID_TOKEN.getMessage())
                 .error(authException.getMessage())
                 .build();
 

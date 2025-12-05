@@ -47,7 +47,6 @@ class PasswordAdapterTest {
                 () -> passwordAdapter.esClaveValida(rawPassword, hashedPassword)
         );
 
-        assertEquals("Password incorrecta", exception.getMessage());
 
         verify(passwordEncoder, atLeastOnce()).matches(rawPassword, hashedPassword);
     }

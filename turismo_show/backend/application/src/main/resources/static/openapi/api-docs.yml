@@ -1,0 +1,24 @@
+openapi: 3.0.1
+
+info:
+  $ref: "./info/info.yml"
+
+servers:
+  - url: http://localhost:8080
+    description: Servidor local
+
+paths:
+  /api/v1/login:
+    $ref: "./paths/login.yml"
+
+  /api/v1/tipo-documento:
+    $ref: "./paths/tipo-documento.yml"
+
+components:
+  securitySchemes:
+    $ref: "./components/security.yml"
+  schemas:
+    $ref: "./components/schemas.yml"
+
+security:
+  - bearerAuth: []

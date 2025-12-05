@@ -1,0 +1,20 @@
+get:
+  tags:
+    - Tipo Documento
+  summary: Obtener lista de tipos de documento
+  security: []  # NO REQUIERE TOKEN
+  responses:
+    '200':
+      description: Lista obtenida correctamente
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "../components/schemas.yml#/TipoDocumentoResponseDTO"
+    '500':
+      description: Error interno
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas.yml#/ErrorResponseDTO"

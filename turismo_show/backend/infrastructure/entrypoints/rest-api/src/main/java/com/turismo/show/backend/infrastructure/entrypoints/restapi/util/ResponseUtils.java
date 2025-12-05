@@ -7,6 +7,7 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public class ResponseUtils {
 
+
     public static ErrorResponseDTO buildErrorResponse(String error, String message) {
         return ErrorResponseDTO.builder()
                 .message(error)

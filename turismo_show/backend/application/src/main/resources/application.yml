@@ -26,18 +26,13 @@ api:
   base-path: /api/v1
   endpoints:
     login: /login
+    tipo-documento: /tipo-documento
 
-openapi:
-  title: Turismo Show API
-  version: 1.0.0
-  description: Documentacion de la API de Turismo en Ciclas
-  terms: http://swagger.io/terms/
-
-  license:
-    name: Apache 2.0
-    url: http://springdoc.org
-
-  security:
-    name: bearerAuth
-    scheme: bearer
-    format: JWT
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    url: /openapi/api-docs.yml
+  api-docs:
+    enabled: true
+    resolve-schema-properties: true

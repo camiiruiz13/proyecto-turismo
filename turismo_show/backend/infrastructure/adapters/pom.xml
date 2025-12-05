@@ -16,6 +16,7 @@
         <module>jpa-postgresql-adapter</module>
         <module>security-adapter</module>
         <module>integration-adapters</module>
+        <module>redis-adapter</module>
     </modules>
 
 

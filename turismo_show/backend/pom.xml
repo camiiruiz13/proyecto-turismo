@@ -24,14 +24,37 @@
     <properties>
         <java.version>21</java.version>
 
-        <!-- Versiones centralizadas -->
         <spring.boot.version>4.0.0</spring.boot.version>
         <postgresql.version>42.7.8</postgresql.version>
         <lombok.version>1.18.42</lombok.version>
         <mapstruct.version>1.6.3</mapstruct.version>
         <jjwt.version>0.13.0</jjwt.version>
         <springdoc.version>3.0.0</springdoc.version>
+        <redis.version>3.2.4</redis.version>
+
+
+        <!-- Exclusiones Sonar -->
+        <sonar.exclusions>
+            application/**,
+            **/dto/**,
+            **/config/**,
+            **/exception/**,
+            **/mapper/**,
+            **/*Mapper.java,
+            **/*MapperImpl.java
+        </sonar.exclusions>
+
+        <sonar.coverage.exclusions>
+            application/**,
+            **/dto/**,
+            **/config/**,
+            **/exception/**,
+            **/mapper/**,
+            **/*Mapper.java,
+            **/*MapperImpl.java
+        </sonar.coverage.exclusions>
     </properties>
+
 
     <dependencyManagement>
         <dependencies>
@@ -50,6 +73,11 @@
             <dependency>
                 <groupId>com.turismo.show.backend.infrastructure.adapters</groupId>
                 <artifactId>security-adapter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.turismo.show.backend.infrastructure.adapters</groupId>
+				<artifactId>redis-adapter</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -143,6 +171,12 @@
                 <version>${spring.boot.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${redis.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
@@ -155,17 +189,18 @@
     </modules>
 
     <build>
+        <!-- PluginManagement: solo define versiones, NO ejecuta -->
         <pluginManagement>
             <plugins>
 
-                <!-- Jacoco -->
+                <!-- Jacoco (definición) -->
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
                     <version>0.8.10</version>
                 </plugin>
 
-                <!-- Sonar (solo plugin, sin config) -->
+                <!-- Sonar scanner -->
                 <plugin>
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
@@ -174,6 +209,40 @@
 
             </plugins>
         </pluginManagement>
+
+        <!-- Plugins que SI se ejecutan en todos los módulos -->
+        <plugins>
+
+            <!-- JACOCO: ESTE ES EL QUE ACTIVA TODO -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.10</version>
+
+                <executions>
+
+                    <!-- Instrumenta el código para medir cobertura -->
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+
+                    <!-- Genera el jacoco.xml necesario para Sonar -->
+                    <execution>
+                        <id>report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+
+                </executions>
+            </plugin>
+
+        </plugins>
     </build>
+
 
 </project>

@@ -20,7 +20,7 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) throws IOException, ServletException {
             ErrorModel errorResponse  = ErrorModel.builder()
-                    .ruta(request.getRequestURI())
+                    .route(request.getRequestURI())
                     .error(ACCES_DENIED.getMessage())
                     .build();
 

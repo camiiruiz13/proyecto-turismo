@@ -33,6 +33,10 @@
             <artifactId>integration-adapters</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.turismo.show.backend.infrastructure.adapters</groupId>
+            <artifactId>redis-adapter</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.turismo.show.backend.infrastructure.entrypoints</groupId>
             <artifactId>rest-api</artifactId>
         </dependency>
@@ -62,25 +66,23 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-            </plugin>
+
+            <!-- SOLO compiler con Lombok -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <annotationProcessorPaths>
-                        <!-- Lombok -->
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
                         </path>
-
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
+
 
 </project>

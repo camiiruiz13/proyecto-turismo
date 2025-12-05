@@ -11,6 +11,6 @@ import lombok.Data;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ErrorModel {
     private String error;
-    private String ruta;
-    private String mensaje;
+    private String route;
+    private String message;
 }
