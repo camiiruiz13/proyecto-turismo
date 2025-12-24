@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: turismo-api
+
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@//localhost:1521/FREEPDB1
+    username: app_user
+    password: App12345
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 30000
+      connection-timeout: 20000
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 2s
+
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+        format_sql: true
+        show_sql: false
+
+logging:
+  level:
+    org.hibernate.sql: info
+    org.hibernate.orm.jdbc.bind: WARN
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    url: /openapi/api-docs.yml
+  api-docs:
+    enabled: true
+    resolve-schema-properties: true
+
+debug: true
+api:
+  basePath: /api/v1
+  endpoints:
+    login: /login
+    catalogos:
+      base: /catalogos
+      byClass: /{className}
+      filter: /filter

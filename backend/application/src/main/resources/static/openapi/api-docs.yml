@@ -1,0 +1,28 @@
+openapi: 3.0.1
+
+info:
+  $ref: "./info/info.yml"
+
+servers:
+  - url: http://localhost:8080
+    description: Servidor local
+
+
+paths:
+  /api/v1/catalogos/{className}:
+    $ref: "./paths/listar-clases.yml"
+
+  /api/v1/catalogos/filter:
+    $ref: "./paths/filtrar-clases-atributo.yml"
+
+  /api/v1/login:
+    $ref: "./paths/login.yml"
+
+
+components:
+  schemas:
+    $ref: "./components/schemas.yml"
+  securitySchemes:
+    $ref: "./components/security.yml"
+
+

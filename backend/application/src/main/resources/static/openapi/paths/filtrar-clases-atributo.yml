@@ -1,0 +1,47 @@
+get:
+  tags:
+    - Catálogos
+  summary: Filter catalog items by attribute
+  operationId: filterCatalogByAttribute
+  security: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../components/schemas.yml#/AtributeDTO"
+  responses:
+    '200':
+      description: Filtered list retrieved successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                items:
+                  oneOf:
+                    - $ref: "../components/schemas.yml#/TipoDocumentoResponseDTO"
+                    - $ref: "../components/schemas.yml#/PaisDTO"
+              message:
+                type: string
+                example: "Object retrieved successfully"
+    '400':
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas.yml#/ErrorResponseDTO"
+    '404':
+      description: Catalog items not found
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas.yml#/ErrorResponseDTO"
+    '500':
+      description: Internal error
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas.yml#/ErrorResponseDTO"

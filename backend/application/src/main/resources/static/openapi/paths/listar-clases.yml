@@ -1,0 +1,49 @@
+get:
+  tags:
+    - Catálogos
+  summary: List catalog items by class name
+  operationId: listCatalogByClassName
+  security: []
+  parameters:
+    - name: className
+      in: path
+      required: true
+      description: Catalog class name to query
+      schema:
+        type: string
+        example: TipoDocumento
+  responses:
+    '200':
+      description: List retrieved successfully
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  oneOf:
+                    - $ref: "../components/schemas.yml#/TipoDocumentoResponseDTO"
+                    - $ref: "../components/schemas.yml#/PaisDTO"
+              message:
+                type: string
+                example: "List retrieved successfully"
+    '400':
+      description: Invalid class name
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas.yml#/ErrorResponseDTO"
+    '404':
+      description: Catalog items not found
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas.yml#/ErrorResponseDTO"
+    '500':
+      description: Internal error
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas.yml#/ErrorResponseDTO"

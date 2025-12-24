@@ -1,0 +1,7 @@
+title: Turismo Show API
+version: "1.0.0"
+description: Documentación oficial del backend Turismo Show
+termsOfService: http://swagger.io/terms/
+license:
+  name: Apache 2.0
+  url: http://springdoc.org

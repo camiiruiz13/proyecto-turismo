@@ -1,0 +1,31 @@
+post:
+  tags:
+    - Login
+  summary: Autenticar usuario
+  description: Realiza el login con correo y contraseña.
+  security: []  # ESTE ENDPOINT NO REQUIERE TOKEN
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../components/schemas.yml#/LoginDTO"
+  responses:
+    '200':
+      description: Login correcto
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas.yml#/SuccesResponseDTO"
+    '404':
+      description: Usuario no encontrado
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas.yml#/ErrorResponseDTO"
+    '500':
+      description: Error interno
+      content:
+        application/json:
+          schema:
+            $ref: "../components/schemas.yml#/ErrorResponseDTO"

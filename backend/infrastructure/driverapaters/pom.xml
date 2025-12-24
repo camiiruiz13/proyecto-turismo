@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.appturismo.show.backend.infrastructure</groupId>
+		<artifactId>infrastructure</artifactId>
+		<version>0.0.1-SNAPSHOT</version><!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.appturismo.show.backend.infrastructure.driverapaters</groupId>
+	<artifactId>driverapaters</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>driverapaters</name>
+	<packaging>pom</packaging>
+	<description>Módulo que agrupa los adaptadores técnicos de salida del sistema.</description>
+
+	<modules>
+		<module>oracleadapter</module>
+		<module>redisdapter</module>
+		<module>securityadapters</module>
+	</modules>
+</project>
