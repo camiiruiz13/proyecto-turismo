@@ -1,6 +1,7 @@
 package com.appturismo.show.backend.infrastructure.entrypoints.entrypoints.restapi.advices;
 
 import com.appturismo.show.backend.domain.model.exception.InvalidCountryNameException;
+import com.appturismo.show.backend.domain.model.exception.PersonaAlreadyExistsException;
 import com.appturismo.show.backend.domain.model.exception.TipoDocumentoNotFoundException;
 import com.appturismo.show.backend.infrastructure.driverapaters.oracleadapter.exception.InfrastructureDatabaseException;
 import com.appturismo.show.backend.infrastructure.driverapaters.redisdapter.exception.CacheNoEncontradaException;
@@ -35,6 +36,9 @@ public class GlobalErrorFilter implements HandlerFilterFunction<ServerResponse, 
         } catch (CacheParametricaException ex){
             return ServerResponse.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(ResponseUtils.buildErrorResponse(ex.getCode(), ex.getMessage()));
+        }catch (PersonaAlreadyExistsException ex){
+            return ServerResponse.status(HttpStatus.CONFLICT)
+                    .body(ResponseUtils.buildErrorResponse(ex.getErrorMessage(), ex.getMessage()));
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.appturismo.show.backend.infrastructure.entrypoints.entrypoints.restapi.dto.request;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -7,9 +8,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Builder
 public class AtributeDTO {
 

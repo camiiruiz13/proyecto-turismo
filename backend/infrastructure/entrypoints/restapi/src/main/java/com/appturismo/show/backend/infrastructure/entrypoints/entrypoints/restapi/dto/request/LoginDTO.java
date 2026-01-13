@@ -1,5 +1,6 @@
 package com.appturismo.show.backend.infrastructure.entrypoints.entrypoints.restapi.dto.request;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -10,10 +11,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class LoginDTO {
 
 

@@ -7,7 +7,9 @@ import java.util.Optional;
 
 public interface PersonaRepository extends JpaRepository<PersonaEntity, Long> {
 
-    Optional<PersonaEntity> findByEmail(String email);
-
-    Optional<PersonaEntity> findByTipoDocumentoIdAndNumeroDocumento(Long tipoDocumentoId, String numeroDocumento);
+    PersonaEntity findFirstByEmailOrIdTipoDocumentoAndNumeroDocumento(
+            String email,
+            Long idTipoDocumento,
+            String numeroDocumento
+    );
 }

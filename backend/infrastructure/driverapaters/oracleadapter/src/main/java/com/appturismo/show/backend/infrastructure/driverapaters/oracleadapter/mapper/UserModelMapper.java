@@ -20,4 +20,5 @@ public interface UserModelMapper {
     @Mapping(source = "fotoBase64", target = "fotoBase64")
     @Mapping(source = "activo", target = "activo")
     User toModel(UsuarioEntity entity);
+
 }

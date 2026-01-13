@@ -27,4 +27,9 @@ public class UserAdapter implements UserGateway {
             throw new InfrastructureDatabaseException(DatabaseErrorMessages.QUERY_EXECUTION_FAILED, e);
         }
     }
+
+    @Override
+    public User createUser(User user) {
+        return null;
+    }
 }
